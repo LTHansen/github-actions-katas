@@ -66,7 +66,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: app
+          context: code
           push: true
           tags: ghcr.io/lthansen/micronaut-app:1.0-${{ github.sha }},ghcr.io/lthansen/micronaut-app:latest       
 
