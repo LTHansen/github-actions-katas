@@ -61,13 +61,13 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
+          username: lthansen
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: app
           push: true
-          tags: ghcr.io/${{ github.actor }}/micronaut-app:1.0-${{ github.sha }},ghcr.io/${{ github.actor }}/micronaut-app:latest       
+          tags: ghcr.io/lthansen/micronaut-app:1.0-${{ github.sha }},ghcr.io/lthansen/micronaut-app:latest       
 
       
